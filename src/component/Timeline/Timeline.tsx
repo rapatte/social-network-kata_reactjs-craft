@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import timelineService from '../../service/timeline'
+import MessageForm from '../MessageForm/MessageForm'
 
 function Timeline() {
     const [timeline, setTimeline] = useState([])
@@ -26,6 +27,7 @@ function Timeline() {
       {timeline.map((comment: any, index: number) => (
         <div key={index}>{comment.author} : {comment.message}</div>
       ))}
+      <MessageForm />
     </>
   )
 }
