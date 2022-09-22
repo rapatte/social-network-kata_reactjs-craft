@@ -1,7 +1,7 @@
 import api from "./api";
 
 const messageService = {
-    postMessage: async () => api.post('/')
+    postMessage: async (message: any) => api.post('/', message)
 }
 
 export default messageService;
